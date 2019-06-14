@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<properties resource="db.properties">
+	</properties>
+	<environments default="module">
+		<environment id="module">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${module.jdbc.driver}" />
+				<property name="url" value="${module.jdbc.url}" />
+				<property name="username" value="${module.jdbc.user}" />
+				<property name="password" value="${module.jdbc.password}" />
+			</dataSource>
+		</environment>
+		<environment id="module2">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${module2.jdbc.driver}" />
+				<property name="url" value="${module2.jdbc.url}" />
+				<property name="username" value="${module2.jdbc.user}" />
+				<property name="password" value="${module2.jdbc.password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	<databaseIdProvider type="VENDOR"> <!-- 用途? -->
+		<property name="Oracle" value="oracle" />
+		<property name="MySQL" value="mysql" />
+	</databaseIdProvider>
+	<mappers>
+		<mapper resource="cn/com/yves/module/persist/rdb/mybatis/mapper/UserModelMapper.xml" />
+	</mappers>
+</configuration>

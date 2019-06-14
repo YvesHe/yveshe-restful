@@ -1,0 +1,4 @@
+module项目需要的资源文件。
+
+i18n.properties: 本地化资源管理.
+module.properties:module项目的配置属性,具体的可以配置的参数在cn.com.yves.module.ModuleProperties中定义了.

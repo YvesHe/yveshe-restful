@@ -1,0 +1,5 @@
+module项目通用的核心框架(通用).
+
+系统属性对应:
+  项目根目录："infra.home.folder";
+  配置目录: "infra.conf.folder";

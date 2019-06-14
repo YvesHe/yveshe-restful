@@ -1,0 +1,18 @@
+这是一个简要的restful的server项目.
+
+
+RESTfulResult: 返回的结构体.
+
+BasicEndpoint: 基础的Server处理末端.(业务需求上的Endpoint都继承该类.)
+
+
+开发思路：
+1.先开发状态码
+2.再开发异常
+3.最后开发Option
+
+
+每个Option都有一个获取  该操作的状态和该操作可能的异常.
+
+
+开发完成后,最后添加异常.
